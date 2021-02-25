@@ -3,11 +3,14 @@ variable vpc_security_group_ids {
   type = list
 }
 variable identity {}
-variable region {}
 variable server_os {
     type = string
     description = "Server Operating System"
     default = "ubuntu"
+}
+
+provider "aws" {
+  region = var.region
 }
 
 resource "aws_instance" "web" {
@@ -16,7 +19,7 @@ resource "aws_instance" "web" {
   instance_type          = "t2.micro"
   subnet_id              = var.subnet_id
   vpc_security_group_ids = var.vpc_security_group_ids
-  region                 = var.region
+
 
   tags = {
     "Identity"    = var.identity
