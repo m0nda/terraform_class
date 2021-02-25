@@ -3,6 +3,7 @@ variable vpc_security_group_ids {
   type = list
 }
 variable identity {}
+variable ami {}
 variable region {}
 variable server_os {
     type = string
