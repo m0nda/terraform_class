@@ -1,4 +1,5 @@
 variable subnet_id {}
+variable region {}
 variable vpc_security_group_ids {
   type = list
 }
