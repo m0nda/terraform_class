@@ -5,7 +5,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
-    "Identity"    = var.identity
+#    "Identity"    = var.identity
     "Name"        = "Student"
     "Environment" = "Training"
   }
