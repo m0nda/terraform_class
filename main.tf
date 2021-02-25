@@ -3,9 +3,7 @@ variable vpc_security_group_ids {
   type = list
 }
 variable identity {}
-variable "region" {
-  default = "<REGION>"
-}
+variable "region" {}
 variable server_os {
     type = string
     description = "Server Operating System"
