@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type          = "t2.micro"
   subnet_id              = var.subnet_id
   vpc_security_group_ids = var.vpc_security_group_ids
-  region                 = var.region
+  region                 = "us-east-1"
 
   tags = {
 #    "Identity"    = var.identity
